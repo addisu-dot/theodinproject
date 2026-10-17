@@ -253,6 +253,10 @@ a, ol, ul {
     font-weight: var(--font-weight-medium);
     font-size: var(--text-xl);
 }
+.features-box {
+    grid-column: 1 / -1;
+    padding: 0px 128px;
+}
 /* CTA SECTION */
 .cta-section {
     background-color: var(--color-gray-100);
