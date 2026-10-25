@@ -1,356 +1,544 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="images/odin-icon-22b41941.svg" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Career in Web Development Starts Here | The Odin Project</title>
+    <meta
+      name="description"
+      content="The Odin Project empowers aspiring web developers to learn together for free"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Your Career in Web Development Starts Here | The Odin Project"
+    />
+    <meta
+      property="og:description"
+      content="The Odin Project empowers aspiring web developers to learn together for free"
+    />
+    <link
+      rel="icon"
+      href="images/odin-icon-22b41941.svg"
+      type="image/svg+xml"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="queries.css" />
-    <title>Your Career in Web Development</title>
   </head>
+
   <body>
-    <header>
-      <!-- NAVIGATION -->
+    <!-- CSS-only state: both inputs must stay siblings placed BEFORE the header -->
+    <input
+      type="checkbox"
+      id="theme-toggle"
+      class="sr-only"
+      role="switch"
+      aria-label="Dark mode"
+    />
+    <input
+      type="checkbox"
+      id="menu-toggle"
+      class="sr-only"
+      aria-label="Open navigation menu"
+    />
 
-      <nav class="navbar">
-        <div class="nav-container">
-          <a
-            class="logo-img"
-            aria-label="The Odin Project"
-            href="https://www.theodinproject.com"
-            ><img
-              class="odin-icon"
-              src="images/odin-icon-22b41941.svg"
-              alt=""
-            /><span class="logo-name">THE ODIN PROJECT</span></a
-          >
-          <ul class="nav-links-container">
-            <li><a class="nav-links" href="#">All Paths</a></li>
-            <li><a class="nav-links" href="#">About</a></li>
-            <li><a class="nav-links" href="#">Community</a></li>
-            <li><a class="nav-links" href="#">Support us</a></li>
-            <li><a class="nav-links" href="#">Sign in</a></li>
-            <li>
-              <input type="checkbox" id="toggle" />
-              <label class="switch" for="toggle"></label>
-            </li>
-            <li>
-              <a class="btn btn-secondary secondary-btn" href="#"
-                >Get Started</a
-              >
-            </li>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header">
+      <nav class="nav" aria-label="Main">
+        <a class="brand" href="index.html" aria-label="The Odin Project home">
+          <img
+            src="images/odin-icon-22b41941.svg"
+            alt=""
+            width="48"
+            height="48"
+          />
+          <span class="brand-name">The Odin Project</span>
+        </a>
+
+        <label class="menu-btn" for="menu-toggle" title="Menu">
+          <span class="burger"></span>
+        </label>
+
+        <div class="nav-panel">
+          <ul class="nav-links">
+            <li><a href="all-paths.html">All Paths</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="support-us.html">Support us</a></li>
+            <li><a href="sign-in.html">Sign in</a></li>
           </ul>
-        </div>
-      </nav>
-
-      <!-- HERO SECTION -->
-
-      <section class="hero-section">
-        <div class="hero-two">
-          <h1 class="hero-heading">
-            Your <span class="main-text-color">Career in Web Development</span>
-            <br />Starts Here
-          </h1>
-          <div class="main-text-container">
-            <p class="main-text">
-              Our full stack curriculum is free and supported by a passionate
-              open source community.
-            </p>
+          <div class="nav-actions">
+            <label
+              class="theme-btn"
+              for="theme-toggle"
+              title="Toggle dark mode"
+            >
+              <svg
+                class="icon icon-moon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                />
+              </svg>
+              <svg
+                class="icon icon-sun"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                />
+              </svg>
+            </label>
+            <a class="btn btn-primary" href="sign-up.html">Get Started</a>
           </div>
         </div>
-        <a class="btn btn-primary" href="#">View Full Curriculum</a>
-      </section>
-      <img
-        class="hero-img"
-        src="images/home-isometric-5dd4786e.svg"
-        alt="odins home"
-      />
+      </nav>
     </header>
 
-    <main>
-      <!-- FEATURES SECTION -->
+    <main id="main">
+      <!-- ============ HERO ============ -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-copy">
+          <h1 id="hero-title">
+            Your <span class="accent">Career in Web Development</span> Starts
+            Here
+          </h1>
+          <p>
+            Our full stack curriculum is free and supported by a passionate open
+            source community.
+          </p>
+          <a class="btn btn-outline" href="all-paths.html"
+            >View Full Curriculum</a
+          >
+        </div>
+        <img
+          class="hero-art"
+          src="images/home-isometric-5dd4786e.svg"
+          alt="Isometric illustration of the Odin Project campus"
+          fetchpriority="high"
+        />
+      </section>
 
-      <section class="features-section">
-        <div class="features-box">
-          <h2 class="section-heading features-heading">How it works</h2>
-          <p class="main-text">
+      <!-- ============ HOW IT WORKS ============ -->
+      <section class="features" aria-labelledby="features-title">
+        <div class="container">
+          <h2 id="features-title" class="section-title">How it works</h2>
+          <p class="section-lead">
             This is the website we wish we had when we were learning on our own.
             We scour the internet looking for only the best resources to
             supplement your learning and present them in a logical order.
           </p>
+
+          <ul class="feature-list">
+            <li class="feature">
+              <img src="images/img-learn-0a725ad1.svg" alt="" loading="lazy" />
+              <h3>Learn</h3>
+              <p>
+                Learn from a curriculum with the best curated online tutorials,
+                blogs, and courses.
+              </p>
+            </li>
+            <li class="feature">
+              <img src="images/img-build-a02a424b.svg" alt="" loading="lazy" />
+              <h3>Build</h3>
+              <p>
+                Build dozens of portfolio-worthy projects along the way, from
+                simple scripts to full programs and deployed websites.
+              </p>
+            </li>
+            <li class="feature">
+              <img
+                src="images/img-connect-866e9700.svg"
+                alt=""
+                loading="lazy"
+              />
+              <h3>Connect</h3>
+              <p>
+                You're not alone. Learn and get help from our friendly community
+                of beginner and experienced developers.
+              </p>
+            </li>
+          </ul>
         </div>
-        <div class="features-item">
-          <div class="features-img">
-            <img src="images/img-learn-0a725ad1.svg" alt="" />
+      </section>
+
+      <!-- ============ WHAT YOU'LL EXPLORE ============ -->
+      <section class="explore" aria-labelledby="explore-title">
+        <div class="container">
+          <h2 id="explore-title" class="section-title">What you'll explore</h2>
+
+          <ul class="card-grid">
+            <li>
+              <a class="card" href="all-paths.html#advanced-html-and-css">
+                <img
+                  src="images/badge-html-css-4d74ba92.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                <h3>Advanced HTML and CSS</h3>
+              </a>
+            </li>
+            <li>
+              <a class="card" href="all-paths.html#javascript">
+                <img
+                  src="images/badge-javascript-43bfdf7b.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                <h3>JavaScript</h3>
+              </a>
+            </li>
+            <li>
+              <a class="card" href="all-paths.html#databases">
+                <img
+                  src="images/badge-database-3757c431.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                <h3>Databases</h3>
+              </a>
+            </li>
+            <li>
+              <a class="card" href="all-paths.html#intermediate-html-and-css">
+                <img
+                  src="images/badge-html-css-4d74ba92.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                <h3>Intermediate HTML and CSS</h3>
+              </a>
+            </li>
+            <li>
+              <a class="card" href="all-paths.html#react">
+                <img
+                  src="images/badge-react-21ede6f9.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                <h3>React</h3>
+              </a>
+            </li>
+            <li>
+              <a class="card" href="all-paths.html#nodejs">
+                <img
+                  src="images/badge-nodejs-b8154f54.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                <h3>NodeJS</h3>
+              </a>
+            </li>
+            <li>
+              <a class="card" href="all-paths.html#ruby-on-rails">
+                <img
+                  src="images/badge-ruby-on-rails-e5f98949.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                <h3>Ruby on Rails</h3>
+              </a>
+            </li>
+            <li>
+              <a class="card" href="all-paths.html#ruby">
+                <img
+                  src="images/badge-ruby-2e00add1.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                <h3>Ruby</h3>
+              </a>
+            </li>
+            <li>
+              <a class="card" href="all-paths.html#getting-hired">
+                <img
+                  src="images/badge-getting-hired-87e39081.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                <h3>Getting Hired</h3>
+              </a>
+            </li>
+          </ul>
+
+          <div class="center">
+            <a class="btn btn-outline" href="all-paths.html"
+              >Explore curriculum</a
+            >
           </div>
-          <h3 class="item-heading">Learn</h3>
-          <p class="main-text text-footer">
-            Learn from a curriculum with the best curated online tutorials,
-            blogs, and courses.
-          </p>
         </div>
-        <div class="features-item">
-          <div class="features-img">
-            <img src="images/img-build-a02a424b.svg" alt="" />
+      </section>
+
+      <!-- ============ SUCCESS STORIES ============ -->
+      <section class="stories" aria-labelledby="stories-title">
+        <div class="container">
+          <h2 id="stories-title" class="section-title">Success Stories</h2>
+
+          <div class="story-grid">
+            <article class="story">
+              <img
+                src="images/rob_pando-2afd55e8.jpg"
+                alt=""
+                width="56"
+                height="56"
+                loading="lazy"
+              />
+              <div>
+                <h3><a href="success-stories.html#rob-pando">Rob Pando</a></h3>
+                <p>
+                  TOP was a perfect match for my learning style. Not walking me
+                  through an entire project but actually forcing me to figure it
+                  out on my own, by pointing me...
+                </p>
+              </div>
+            </article>
+
+            <article class="story">
+              <img
+                src="images/cody_loyd-fb0721ea.jpg"
+                alt=""
+                width="56"
+                height="56"
+                loading="lazy"
+              />
+              <div>
+                <h3><a href="success-stories.html#cody-loyd">Cody Loyd</a></h3>
+                <p>
+                  Before I started the Odin Project I had literally ZERO
+                  programming experience. After almost exactly a year of working
+                  through the program, I was offered a job as a front...
+                </p>
+              </div>
+            </article>
+
+            <article class="story">
+              <img
+                src="images/andrej_dragojevic-a1bd5d98.jpg"
+                alt=""
+                width="56"
+                height="56"
+                loading="lazy"
+              />
+              <div>
+                <h3>
+                  <a href="success-stories.html#andrej-dragojevic"
+                    >Andrej Dragojević</a
+                  >
+                </h3>
+                <p>
+                  An incredible self-paced curriculum that consists of the best
+                  resources for learning programming on the web! It was an
+                  invaluable resource on my path to a becoming a software
+                  developer. ...
+                </p>
+              </div>
+            </article>
+
+            <article class="story">
+              <img
+                src="images/skip-7f368b69.jpg"
+                alt=""
+                width="56"
+                height="56"
+                loading="lazy"
+              />
+              <div>
+                <h3>
+                  <a href="success-stories.html#skip-gibson">Skip Gibson</a>
+                </h3>
+                <p>
+                  Before I found The Odin Project I had very little direction
+                  with my learning, jumping from topic to topic then trying to
+                  piece things together as I went. Having this...
+                </p>
+              </div>
+            </article>
           </div>
-          <h3 class="item-heading">Build</h3>
-          <p class="main-text text-footer">
-            Build dozens of portfolio-worthy projects along the way, from simple
-            scripts to full programs and deployed websites.
-          </p>
-        </div>
-        <div class="features-item">
-          <div class="features-img">
-            <img src="images/img-connect-866e9700.svg" alt="" />
-          </div>
-          <h3 class="item-heading">Connect</h3>
-          <p class="main-text text-footer">
-            You're not alone. Learn and get help from our friendly community of
-            beginner and experienced developers.
+
+          <p class="center">
+            <a class="more-link" href="success-stories.html"
+              >Read more success stories</a
+            >
           </p>
         </div>
       </section>
 
-      <!-- CTA SECTION -->
-
-      <section class="cta-section">
-        <div class="cta-container">
-          <h2 class="section-heading cta-heading">What you'll explore</h2>
-          <div class="cta-cards-container">
-            <a class="cta-cards" href="#">
-              <img
-                class="cta-img"
-                src="images/badge-html-css-4d74ba92.svg"
-                alt=""
-              />
-              <h3 class="item-heading">Advanced HTML and CSS</h3>
-            </a>
-
-            <a class="cta-cards" href="#">
-              <img
-                class="cta-img"
-                src="images/badge-javascript-43bfdf7b.svg"
-                alt=""
-              />
-              <h3 class="item-heading">JavaScript</h3>
-            </a>
-
-            <a class="cta-cards" href="#">
-              <img
-                class="cta-img"
-                src="images/badge-database-3757c431.svg"
-                alt=""
-              />
-              <h3 class="item-heading">Databases</h3>
-            </a>
-
-            <a class="cta-cards" href="#">
-              <img
-                class="cta-img"
-                src="images/badge-html-css-4d74ba92.svg"
-                alt=""
-              />
-              <h3 class="item-heading">Intermediate HTML and CSS</h3>
-            </a>
-
-            <a class="cta-cards" href="#">
-              <img
-                class="cta-img"
-                src="images/badge-react-21ede6f9.svg"
-                alt=""
-              />
-              <h3 class="item-heading">React</h3>
-            </a>
-
-            <a class="cta-cards" href="#">
-              <img
-                class="cta-img"
-                src="images/badge-nodejs-b8154f54.svg"
-                alt=""
-              />
-              <h3 class="item-heading">NodeJS</h3>
-            </a>
-
-            <a class="cta-cards" href="#">
-              <img
-                class="cta-img"
-                src="images/badge-ruby-on-rails-e5f98949.svg"
-                alt=""
-              />
-              <h3 class="item-heading">Ruby on Rails</h3>
-            </a>
-
-            <a class="cta-cards cta-last" href="#">
-              <img
-                class="cta-img"
-                src="images/badge-ruby-2e00add1.svg"
-                alt=""
-              />
-              <h3 class="item-heading">Ruby</h3>
-            </a>
-
-            <a class="cta-cards" href="#">
-              <img
-                class="cta-img"
-                src="images/badge-getting-hired-87e39081.svg"
-                alt=""
-              />
-              <h3 class="item-heading">Getting Hired</h3>
-            </a>
-          </div>
-          <a class="btn btn-primary" href="#">Explore curriculum</a>
-        </div>
-      </section>
-
-      <!-- TESTIMONIALS SECTION -->
-
-      <section class="testimonial-section">
-        <h2 class="section-heading-success">Success Stories</h2>
-        <div class="testimonial-container">
-          <img
-            class="testimonial-img"
-            src="images/rob_pando-2afd55e8.jpg"
-            alt=""
-          />
-          <article class="testimonial">
-            <a class="testimonial-name" href="#">Rob Pando</a>
-            <p class="main-text">
-              TOP was a perfect match for my learning style. Not walking me
-              through an entire project but actually forcing me to figure it out
-              on my own, by pointing me...
-            </p>
-          </article>
-          <img
-            class="testimonial-img"
-            src="images/cody_loyd-fb0721ea.jpg"
-            alt=""
-          />
-          <article class="testimonial">
-            <a class="testimonial-name" href="#">Cody Loyd</a>
-            <p class="main-text">
-              Before I started the Odin Project I had literally ZERO programming
-              experience. After almost exactly a year of working through the
-              program, I was offered a job as a front...
-            </p>
-          </article>
-          <img
-            class="testimonial-img"
-            src="images/andrej_dragojevic-a1bd5d98.jpg"
-            alt=""
-          />
-          <article class="testimonial">
-            <a class="testimonial-name" href="#">Andrej Dragojević</a>
-            <p class="main-text">
-              An incredible self-paced curriculum that consists of the best
-              resources for learning programming on the web! It was an
-              invaluable resource on my path to a becoming a software developer.
-              ...
-            </p>
-          </article>
-          <img class="testimonial-img" src="images/skip-7f368b69.jpg" alt="" />
-          <article class="testimonial">
-            <a class="testimonial-name" href="#">Skip Gibson</a>
-            <p class="main-text">
-              Before I found The Odin Project I had very little direction with
-              my learning, jumping from topic to topic then trying to piece
-              things together as I went. Having this...
-            </p>
-          </article>
-        </div>
-        <a class="read-more-link" href="#"
-          ><div>Read more success stories</div></a
-        >
-      </section>
-
-      <!-- SUPPORT US SECTION -->
-
-      <section class="support-section">
-        <div class="support-two">
-          <div class="support-heading">
-            <h2 class="section-heading">Support us!</h2>
-          </div>
-          <p class="main-text text-footer">
+      <!-- ============ SUPPORT US ============ -->
+      <section class="support" aria-labelledby="support-title">
+        <div class="container support-copy">
+          <h2 id="support-title" class="section-title">Support us!</h2>
+          <p>
             The Odin Project is funded by the community. Join us in empowering
             learners around the globe by supporting The Odin Project!
           </p>
-        </div>
-        <div class="support-btn">
-          <a class="btn btn-primary" href="#">Learn more</a>
-          <a class="btn btn-secondary" href="#">Donate now</a>
+          <div class="btn-row">
+            <a class="btn btn-outline" href="support-us.html">Learn more</a>
+            <a
+              class="btn btn-primary"
+              href="https://opencollective.com/theodinproject/donate?amount=5"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Donate now</a
+            >
+          </div>
         </div>
       </section>
     </main>
 
-    <!-- FOOTER -->
-
-    <footer>
-      <div class="footer-container">
-        <div class="footer-box">
-          <a class="logo-footer" href="https://www.theodinproject.com"
-            ><img
-              class="odin-icon"
-              src="images/odin-icon-22b41941.svg"
-              alt=""
-            />THE ODIN PROJECT</a
-          >
-          <p class="main-text text-footer">
-            High quality coding education maintained by an open source
-            community.
-          </p>
-          <div class="footer-socials">
-            <a href="#"
-              ><img class="socials" src="images/logo-github.svg" alt="github"
-            /></a>
-            <a href="#"
-              ><img class="socials" src="images/logo-discord.svg" alt="discord"
-            /></a>
-            <a href="#"
-              ><img
-                class="socials"
-                src="images/logo-facebook.svg"
-                alt="facebook"
-            /></a>
-            <a href="#"
-              ><img class="socials" src="images/logo-x.svg" alt="x"
-            /></a>
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a
+              class="brand"
+              href="index.html"
+              aria-label="The Odin Project home"
+            >
+              <img
+                src="images/odin-icon-22b41941.svg"
+                alt=""
+                width="48"
+                height="48"
+                loading="lazy"
+              />
+              <span class="brand-name">The Odin Project</span>
+            </a>
+            <p>
+              High quality coding education maintained by an open source
+              community.
+            </p>
+            <ul class="socials">
+              <li>
+                <a
+                  href="https://github.com/TheOdinProject"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <img
+                    src="images/logo-github.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://discord.gg/fbFCkYabZB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Discord"
+                >
+                  <img
+                    src="images/logo-discord.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/theodinproject/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                >
+                  <img
+                    src="images/logo-facebook.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/TheOdinProject"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="X (Twitter)"
+                >
+                  <img
+                    src="images/logo-x.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+            </ul>
           </div>
+
+          <nav class="footer-col" aria-labelledby="f-about">
+            <h2 id="f-about">About us</h2>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="success-stories.html">Success Stories</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-col" aria-labelledby="f-support">
+            <h2 id="f-support">Support</h2>
+            <ul>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contribute.html">Contribute</a></li>
+              <li><a href="contact.html">Contact us</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-col" aria-labelledby="f-guides">
+            <h2 id="f-guides">Guides</h2>
+            <ul>
+              <li><a href="community-guides.html">Community guides</a></li>
+              <li>
+                <a href="installation-guides.html">Installation guides</a>
+              </li>
+            </ul>
+          </nav>
+
+          <nav class="footer-col" aria-labelledby="f-legal">
+            <h2 id="f-legal">Legal</h2>
+            <ul>
+              <li><a href="terms.html">Terms</a></li>
+              <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+          </nav>
         </div>
 
-        <div class="footer-box">
-          <h3 class="item-heading">About us</h3>
-          <ul>
-            <li class="footer-list"><a href="#">About</a></li>
-            <li class="footer-list"><a href="#">Team</a></li>
-            <li class="footer-list"><a href="#">Blog</a></li>
-            <li class="footer-list"><a href="#">Success Stories</a></li>
-          </ul>
-        </div>
-        <div class="footer-box">
-          <h3 class="item-heading">Support</h3>
-          <ul>
-            <li class="footer-list"><a href="#">FAQ</a></li>
-            <li class="footer-list"><a href="#">Contribute</a></li>
-            <li class="footer-list"><a href="#">Contact us</a></li>
-          </ul>
-        </div>
-        <div class="footer-box">
-          <h3 class="item-heading">Guides</h3>
-          <ul>
-            <li class="footer-list"><a href="#">Community guides</a></li>
-            <li class="footer-list"><a href="#">Installation guides</a></li>
-          </ul>
-        </div>
-        <div class="footer-box">
-          <h3 class="item-heading">Legal</h3>
-          <ul>
-            <li class="footer-list"><a href="#">Terms</a></li>
-            <li class="footer-list"><a href="#">Privacy</a></li>
-          </ul>
-        </div>
+        <p class="copyright">
+          &copy; 2026 The Odin Project. All rights reserved.
+        </p>
       </div>
-      <p class="main-text footer-text">
-        © 2026 The Odin Project. All rights reserved.
-      </p>
     </footer>
   </body>
 </html>
